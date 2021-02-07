@@ -4,8 +4,7 @@ def bubble_sort(x):
         for j in range(len(x) - i - 1):
             if x[j] > x[j + 1]: x[j], x[j + 1] = x[j + 1], x[j]
 
-    for i in range(len(x)):
-        print(x[i])
+    print(*x)
 
 
 bubble_sort([5, 4, 3, 2, 1])
