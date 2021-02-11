@@ -3,7 +3,7 @@ import math
 
 def conquer(x, p, q, r):
     """defines the conquer part of the algorithm"""
-    
+
     n1, n2 = q - p + 1, r - q
     L, R = [], []
 
@@ -27,7 +27,7 @@ def conquer(x, p, q, r):
 
 
 def merge(x, p, r):
-    """handles both the divide part of the algorithm
+    """handles the divide part of the algorithm
     and calls the conquer part"""
 
     if p < r:
@@ -47,5 +47,3 @@ def merge_sort(x):
     merge(x, p, r)
 
     return x
-
-
