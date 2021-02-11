@@ -2,6 +2,8 @@ import math
 
 
 def conquer(x, p, q, r):
+    """defines the conquer part of the algorithm"""
+    
     n1, n2 = q - p + 1, r - q
     L, R = [], []
 
@@ -25,6 +27,8 @@ def conquer(x, p, q, r):
 
 
 def merge(x, p, r):
+    """handles both the divide part of the algorithm
+    and calls the conquer part"""
 
     if p < r:
         q = math.floor((p + r)/2)
@@ -35,13 +39,13 @@ def merge(x, p, r):
 
 
 def merge_sort(x):
-    """sorts the given list using merge sort algorithm"""
-    p = 0
-    r = len(x) - 1
+    """sorts the given list using merge sort algorithm
+    and returns the sorted list"""
+
+    p, r = 0, len(x) - 1
 
     merge(x, p, r)
 
     return x
 
 
-print(merge_sort([56, 45, 13, 3, 89, 100]))
