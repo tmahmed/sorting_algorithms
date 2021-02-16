@@ -1,5 +1,5 @@
 def find_pivot_pos(x, p, r):
-    """finds the final position of the pivot"""
+    """finds the final position of the pivot in each turn"""
     pivot_pos, pivot, i = r, x[r], p - 1
 
     for j in range(p, r):
